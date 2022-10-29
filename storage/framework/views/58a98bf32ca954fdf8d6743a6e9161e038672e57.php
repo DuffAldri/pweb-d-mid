@@ -51,9 +51,11 @@
                         <?php endif; ?>
                         
                         <?php if(auth()->guard()->check()): ?>
+                        <?php if(auth()->user()->role_id == '1'): ?>
                         <li class="nav-item">
                             <a class="nav-link <?php echo e(($title == "Dashboard") ? 'active' : ''); ?>" href="<?php echo e(route('dashboard')); ?>">Dashboard</a>
                         </li>
+                        <?php endif; ?>
                         <li class="nav-item">
                             <a class="nav-link <?php echo e(($title == "Catalog") ? 'active' : ''); ?>" href="<?php echo e(route('catalog')); ?>">Catalog</a>
                         </li>

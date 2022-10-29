@@ -51,9 +51,11 @@
                         @endguest
                         
                         @auth
+                        @if(auth()->user()->role_id == '1')
                         <li class="nav-item">
                             <a class="nav-link {{ ($title == "Dashboard") ? 'active' : '' }}" href="{{ route('dashboard') }}">Dashboard</a>
                         </li>
+                        @endif
                         <li class="nav-item">
                             <a class="nav-link {{ ($title == "Catalog") ? 'active' : '' }}" href="{{ route('catalog') }}">Catalog</a>
                         </li>

@@ -3,7 +3,7 @@
 
 <div class="container  pt-3">
     <div class="row">
-        <a class="fs-5 text-decoration-none text-muted" onclick="history.back()">Back</a>
+        <a class="fs-5 text-decoration-none text-muted " onclick="history.back()" role="button">Back</a>
     </div>
     <div class="row mt-3">
         <div class="col-4 ">
@@ -29,7 +29,7 @@
                 <h1>{{ $kos->name }}</h1>
             </div>
             <div class="row  text-muted fs-5 fw-semibold">
-                <p>Rp{{ $kos->price }}</p>
+                <p>Rp{{ number_format($kos->price, 2, ',', '.') }}</p>
             </div>
             <div class="row ">
                 <h5 class="first-color ">Alamat</h5>

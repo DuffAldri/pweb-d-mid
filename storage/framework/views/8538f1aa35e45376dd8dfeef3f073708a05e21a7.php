@@ -10,11 +10,11 @@
         </div>
         <div class="col-lg-6 m-3 d-flex align-items-center">
             <div class="col">
-                <a class="text-decoration-none" href="/view">
+                <a class="text-decoration-none" href="/view/<?php echo e($k->slug); ?>">
                     <h3 class=""><?php echo e($k->name); ?></h3>
                     <p class="text-muted">Detail></p>
                 </a>
-                <p class="fs-5"><?php echo e($k->price); ?></p>
+                <p class="fs-5">Rp<?php echo e(number_format($k->price, 2, ',', '.')); ?></p>
                 <a class="fs-5 d-flex flex-row align-items-center text-decoration-none" href="<?php echo e($k["maps"]); ?>">
                     <div class="col-1">
                         <i class="fs-2 fa-solid fa-map-location-dot pe-3"></i>
